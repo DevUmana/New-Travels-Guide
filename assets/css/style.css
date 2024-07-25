@@ -138,3 +138,28 @@ footer {
     justify-content: space-around;
     padding: 2% 6%;
 }
+
+.list-group-item:hover {
+  background-color: var(--secondary);
+  color: var(--light);
+}
+
+.list-group-item:hover #btn-close {
+  display: block;
+}
+
+.list-group-item p {
+  margin: 0;
+
+}
+
+#list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+#btn-close {
+  display: none;
+}
