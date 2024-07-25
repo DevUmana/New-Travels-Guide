@@ -92,16 +92,16 @@ main {
 }
 
 footer {
-    padding: 15px 6% 15px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    height: 100px;
-    align-items: center;
-    background-color: var(--primary);
-    box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
-  }
+  padding: 15px 6% 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100px;
+  align-items: center;
+  background-color: var(--primary);
+  box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
+}
 
 .hero-banner {
   background: rgb(68, 88, 120);
@@ -132,11 +132,11 @@ footer {
 }
 
 .blogger-section {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 2% 6%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2% 6%;
 }
 
 .list-group-item:hover {
@@ -150,7 +150,6 @@ footer {
 
 .list-group-item p {
   margin: 0;
-
 }
 
 #list-group-item {

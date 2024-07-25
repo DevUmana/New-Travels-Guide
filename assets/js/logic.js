@@ -1,10 +1,10 @@
-const userList = document.querySelector('#list-group');
+const userList = document.querySelector("#list-group");
 
 // Remove List Item - Landing Page
-userList.addEventListener('click', function (event) {
-const target = event.target;
-if (target.matches('button') === true) {
-    const index = target.parentElement.getAttribute('data-index');
+userList.addEventListener("click", function (event) {
+  const target = event.target;
+  if (target.matches("button") === true) {
+    const index = target.parentElement.getAttribute("data-index");
     console.log(`Button index ${index} has been clicked`);
   }
 });
@@ -20,4 +20,3 @@ const redirectPage = function (url) {
   redirectURL = url;
   location.assign(url);
 };
-
