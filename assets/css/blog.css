@@ -1,33 +1,160 @@
-
-
-/* brand color palette 
-:root {
+* {
+    box-sizing: border-box;
+  }
+  
+  /* brand color palette */
+  :root {
     --primary: rgb(8, 53, 121);
     --secondary: rgb(196, 11, 11);
     --tertiary: rgb(76, 59, 91);
     --dark: rgb(11, 18, 43);
     --light: rgb(250, 250, 0);
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans",;
+    color: var(--primary);
+    background-color: var(--light);
+    line-height: 1.5;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  header {
+    padding: 15px 6% 15px 5;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100px;
+    align-items: center;
+    background-color: var(--primary);
+    box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
+  }
+  
+  header h1 {
+    color: var(--primary);
+    background-color: var(--secondary);
+    padding: 5px 5% 10px 5%;
+    margin: 0;
+    font-size: 3vw;
+    line-height: 1;
+    border-radius: 10px;
+    color: var(--light);
+  }
+
+  header h2 {
+    color: var(--light);
+    justify-content: center;
+    padding: 5px 5% 10px 5%;
+  }
+  
+  nav {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    text-decoration: none;
+    padding: 1px 1px;
+    color: var(--secondary);
+    margin-right: 3px;
+   
+    background-repeat: no-repeat;
+    background-size: 100% 0.2em;
+    transition: all 0.25s ease-in;
+    font-size: .8rem;
+  }
+  
+  .static {
+    background-color: var(--secondary);
+    color: var(--primary);
+  }
+  
+  nav a:last-child {
+    margin-right: 0;
+  }
+  
+
+  nav a:first-child {
+    margin-left: 0px;
+  }
+
+.outer-box {
+    border: 2px solid black;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
 }
-*/
 
-/* header styling (includes City Name and Navigation */
+.inner-box-1{
+    width: 400px;
+    height: 175px;
+    background-color: white;
+    border: 5px solid var(--dark);
+    margin: 5px;
+}
 
-/* body styling */
+.inner-box-2{
+    width: 2000px;
+    height: 175px;
+    background-color: white;
+    border: 5px solid var(--light);
+    margin: 5px;
+}
 
-/* main styling */
+.container {
+    display: flex;
+}
+.box {
+    flex: 100%;
+    height: 300px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    background-color: white;
+    border: 5px solid var(--secondary);
+}
+.carousel-item img {
+    width: 100%;
+    height: 200px; /* Adjust height as needed */
+}
 
-/* footer styling */
+/* Styling Carousel Captions */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 1px;
+}
 
-/* blogger img styling */
+/* Carousel Controls */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    color: #fff; /* Control button color */
+}
 
-/* blogger info styling */
-
-/* card styling (restaurant, attractions, activities */
-
-/* lists (restaurant, attractions, activities) */
-
-/* carousel of images styling */
-
+/* Indicator Dots */
+.carousel-indicators button {
+    background-color: #888; /* Indicator dot color */
+    width: 10px; /* Adjust size */
+    height: 10px; /* Adjust size */
+}
 
 
 
