@@ -15,7 +15,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans",;
+    "Lucida Sans";
   color: var(--primary);
   background-color: var(--light);
   line-height: 1.5;
@@ -90,14 +90,16 @@ nav a:last-child {
 
 main {
   margin-bottom: 45px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
 }
 
 footer {
-  position:fixed;
-  left:0px;
-  bottom:0px;
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
   height: 100px;
-  width:100%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -169,37 +171,33 @@ footer {
   display: none;
 }
 
-  .blogger-card {
-    width: 1000px; /* Set the width of the card to 400px for a wider appearance */
-    height: 400px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .blogger-card img {
-    width: 100%; /* Make the image inside the card fill the width */
-    height: 50%; /* Set the height of the image */
-    object-fit: cover; /* Ensure the image covers the entire space */
-    border-top-left-radius: 10px; /* Add rounded corners to the top left and right of the image */
-    border-top-right-radius: 10px;
-  }
-  
-  .blogger-card-content {
-    padding: 10px; /* Add padding for content inside the card */
-  }
-  
-  .blogger-card h3 {
-    margin: 0; /* Remove margin for the heading */
-  }
-  
-  .blogger-card p {
-    margin: 10px 0; /* Add margin around paragraphs */
-  }
-    
+.blogger-card {
+  width: 1000px; /* Set the width of the card to 400px for a wider appearance */
+  height: 400px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.blogger-card img {
+  width: 100%; /* Make the image inside the card fill the width */
+  height: 50%; /* Set the height of the image */
+  object-fit: cover; /* Ensure the image covers the entire space */
+  border-top-left-radius: 10px; /* Add rounded corners to the top left and right of the image */
+  border-top-right-radius: 10px;
+}
 
+.blogger-card-content {
+  padding: 10px; /* Add padding for content inside the card */
+}
 
+.blogger-card h3 {
+  margin: 0; /* Remove margin for the heading */
+}
+
+.blogger-card p {
+  margin: 10px 0; /* Add margin around paragraphs */
+}

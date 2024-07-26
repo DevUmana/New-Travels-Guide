@@ -1,4 +1,5 @@
 const main = document.querySelector("main");
+const button = document.querySelector("button");
 
 let bloggerOneList = [];
 let bloggerTwoList = [];
@@ -9,31 +10,69 @@ let bloggerFourList = [];
 main.addEventListener("click", function (event) {
   const target = event.target;
   bloggerTwoList =
-  JSON.parse(localStorage.getItem("bloggerTwoList")) || bloggerTwoList;
+    JSON.parse(localStorage.getItem("bloggerTwoList")) || bloggerTwoList;
 
   if (target.matches("button") === true) {
-    const divId = target.parentElement.parentElement.parentElement.getAttribute("id");
-    if (divId === "blogger-two") {
-        const index = target.parentElement.getAttribute("data-index");
-        console.log(`${divId} || Button || index ${index} || has been clicked`);
-        bloggerTwoList.splice(index, 1);
-        firstFlag = false;
-        localStorage.removeItem("firstFlag");
-        localStorage.setItem("bloggerTwoList", JSON.stringify(bloggerTwoList));
-        renderListItems();
+    const divId =
+      target.parentElement.parentElement.parentElement.getAttribute("id");
+    if (divId === "blogger-one") {
+      const index = target.parentElement.getAttribute("data-index");
+      console.log(`${divId} || Button || index ${index} || has been clicked`);
+    } else if (divId === "blogger-two") {
+      const index = target.parentElement.getAttribute("data-index");
+      console.log(`${divId} || Button || index ${index} || has been clicked`);
+      bloggerTwoList.splice(index, 1);
+      firstFlag = false;
+      localStorage.removeItem("firstFlag");
+      localStorage.setItem("bloggerTwoList", JSON.stringify(bloggerTwoList));
+      readAllBlogger();
+    } else if (divId === "blogger-three") {
+      const index = target.parentElement.getAttribute("data-index");
+      console.log(`${divId} || Button || index ${index} || has been clicked`);
+    } else if (divId === "blogger-four") {
+      const index = target.parentElement.getAttribute("data-index");
+      console.log(`${divId} || Button || index ${index} || has been clicked`);
     }
-    const index = target.parentElement.getAttribute("data-index");
-    console.log(`${divId} || Button || index ${index} || has been clicked`);
   }
 });
 
-// Render List Item - Landing Page
-function readLocalStorage() {
-  const list = JSON.parse(localStorage.getItem("bloggerTwoList"));
-  if (!list) {
+// Read Blogger One List
+function readBloggerOne() {
+  const readBloggerOne = JSON.parse(localStorage.getItem("bloggerOneList"));
+  if (!readBloggerOne) {
     return [];
   } else {
-    return list;
+    return readBloggerOne;
+  }
+}
+
+// Read Blogger Two List
+function readBloggerTwo() {
+  const readBloggerTwo = JSON.parse(localStorage.getItem("bloggerTwoList"));
+  if (!readBloggerTwo) {
+    return [];
+  } else {
+    return readBloggerTwo;
+  }
+}
+
+// Read Blogger Three List
+function readBloggerThree() {
+  const readBloggerThree = JSON.parse(localStorage.getItem("readBloggerThree"));
+  if (!readBloggerThree) {
+    return [];
+  } else {
+    return readBloggerThree;
+  }
+}
+
+// Read Blogger Four List
+function readBloggerFour() {
+  const readBloggerFour = JSON.parse(localStorage.getItem("readBloggerFour"));
+  if (!readBloggerFour) {
+    return [];
+  } else {
+    return readBloggerFour;
   }
 }
 
@@ -45,7 +84,7 @@ function storeTestData(list) {
   if (list) {
     bloggerTwoList.push(list);
   }
-  
+
   let checkFlag = localStorage.getItem("firstFlag");
   if (checkFlag === null) {
     firstFlag = true;
