@@ -5,15 +5,27 @@ const bloggerFourUlEL = document.querySelector("#blogger-four");
 
 // TODO: Create a function that builds an element and appends it to the DOM
 function appendElementToDOM(list) {
+  //Sorts the list by blogger, columns, and dataIndex
+  list.sort(
+    (a, b) =>
+      a.blogger - b.blogger ||
+      a.columns - b.columns ||
+      a.dataIndex - b.dataIndex
+  );
+
+  const ul = document.createElement("ul");
+  ul.classList.add("list-group", "list-group-flush");
+  ul.setAttribute("id", "list-group");
+
   for (let i = 0; i < list.length; i++) {
     const item = list[i];
-    const ul = document.createElement("ul");
-    ul.classList.add("list-group", "list-group-flush");
-    ul.setAttribute("id", "list-group");
     const li = document.createElement("li");
     li.classList.add("list-group-item");
     li.setAttribute("id", "list-group-item");
+    li.setAttribute("data-blogger", item.blogger);
+    li.setAttribute("data-columns", item.columns);
     li.setAttribute("data-index", item.dataIndex);
+    li.setAttribute("data-id", item.id);
     const p = document.createElement("p");
     p.textContent = item.title;
     const button = document.createElement("button");
@@ -21,22 +33,22 @@ function appendElementToDOM(list) {
     button.classList.add("btn-close");
     button.setAttribute("id", "btn-close");
     button.setAttribute("aria-label", "Close");
-    if (item.blogger === "bloggerOne") {
+    if (item.blogger === "1") {
       bloggerOneUlEL.appendChild(ul);
       ul.appendChild(li);
       li.appendChild(p);
       li.appendChild(button);
-    } else if (item.blogger === "bloggerTwo") {
+    } else if (item.blogger === "2") {
       bloggerTwoUlEL.appendChild(ul);
       ul.appendChild(li);
       li.appendChild(p);
       li.appendChild(button);
-    } else if (item.blogger === "bloggerThree") {
+    } else if (item.blogger === "3") {
       bloggerThreeUlEL.appendChild(ul);
       ul.appendChild(li);
       li.appendChild(p);
       li.appendChild(button);
-    } else {
+    } else if (item.blogger === "4") {
       bloggerFourUlEL.appendChild(ul);
       ul.appendChild(li);
       li.appendChild(p);
@@ -45,115 +57,57 @@ function appendElementToDOM(list) {
   }
 }
 
+// Read all bloggers
 function readAllBlogger() {
-  for (let i = 0; i < 4; i++) {
-    if (i === 0) {
-      let bloggerList = readBloggerOne();
-      if (bloggerList.length === 1) {
-        bloggerOneUlEL.children[2].remove();
-        return;
-      } else {
-        appendElementToDOM(bloggerList);
-      }
-    } else if (i === 1) {
-      let bloggerList = readBloggerTwo();
-      if (bloggerList.length === 0) {
-        bloggerTwoUlEL.children[2].remove();
-        return;
-      } else {
-        appendElementToDOM(bloggerList);
-      }
-    } else if (i === 2) {
-      let bloggerList = readBloggerThree();
-      if (bloggerList.length === 1) {
-        bloggerThreeUlEL.children[2].remove();
-        return;
-      } else {
-        appendElementToDOM(bloggerList);
-      }
-    } else {
-      let bloggerList = readBloggerFour();
-      if (bloggerList.length === 1) {
-        bloggerFourUlEL.children[2].remove();
-        return;
-      } else {
-        appendElementToDOM(bloggerList);
-      }
-    }
-  }
+  renderBloggerOne();
+  renderBloggerTwo();
+  renderBloggerThree();
+  renderBloggerFour();
 }
 
 // Render Blogger One List
 function renderBloggerOne() {
-  let readBloggerOne = readBloggerOne();
+  let readBloggerOneList = readBloggerOne();
 
-  if (readBloggerOne.length === 0) {
-    console.log("No list items to render");
-    bloggerOneUlEL.children[2].remove();
+  if (readBloggerOneList.length === 0) {
     return;
   } else {
-    console.log("List items exist");
-    appendElementToDOM(readBloggerOne);
+    appendElementToDOM(readBloggerOneList);
   }
 }
 
 // Render Blogger Two List
 function renderBloggerTwo() {
-  let bloggerTwo = readBloggerTwo();
+  let readBloggerTwoList = readBloggerTwo();
 
-  if (bloggerTwo.length === 0) {
-    console.log("No list items to render");
-    bloggerTwoUlEL.children[2].remove();
+  if (readBloggerTwoList.length === 0) {
     return;
   } else {
-    console.log("List items exist");
-    appendElementToDOM(bloggerTwo);
+    console.log("here 1");
+    appendElementToDOM(readBloggerTwoList);
   }
 }
 
 // Render Blogger Three List
 function renderBloggerThree() {
-  let readBloggerThree = readBloggerThree();
+  let readBloggerThreeList = readBloggerThree();
 
-  if (readBloggerThree.length === 0) {
-    console.log("No list items to render");
-    bloggerThreeUlEL.children[2].remove();
+  if (readBloggerThreeList.length === 0) {
     return;
   } else {
-    console.log("List items exist");
-    appendElementToDOM(readBloggerThree);
+    appendElementToDOM(readBloggerThreeList);
   }
 }
 
 // Render Blogger Four List
 function renderBloggerFour() {
-  let readBloggerFour = readBloggerFour();
+  let readBloggerFourList = readBloggerFour();
 
-  if (readBloggerFour.length === 0) {
-    console.log("No list items to render");
-    bloggerFourUlEL.children[2].remove();
+  if (readBloggerFourList.length === 0) {
     return;
   } else {
-    console.log("List items exist");
-    appendElementToDOM(readBloggerFour);
+    appendElementToDOM(readBloggerFourList);
   }
 }
 
-// handle list addition
-function handleListAddition() {
-  let checkFlag = localStorage.getItem("firstFlag");
-
-  if (checkFlag === null) {
-    let list = {
-      title: "An item",
-      dataIndex: 0,
-      blogger: "bloggerTwo",
-    };
-    storeTestData(list);
-    readAllBlogger();
-  } else {
-    readAllBlogger();
-  }
-}
-
-handleListAddition();
+readAllBlogger();
