@@ -1,4 +1,5 @@
 const blogMain = document.querySelector("main");
+const alert = document.querySelector(".success");
 
 blogMain.addEventListener("click", function (event) {
   const target = event.target;
@@ -25,6 +26,20 @@ blogMain.addEventListener("click", function (event) {
         target.textContent
       }`
     );
+    displaySuccessMessage();
     storeTestData(list);
   }
 });
+
+function displaySuccessMessage() {
+  alert.classList.add("show");
+  setTimeout(function () {
+    alert.classList.remove("show");
+  }, 1000);
+}
+
+function hideSuccessMessage() {
+  alert.classList.remove("show");
+}
+
+hideSuccessMessage();
