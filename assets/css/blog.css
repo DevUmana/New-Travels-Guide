@@ -91,11 +91,38 @@ nav a:last-child {
   margin-right: 0;
 }
 
+nav a:first-child {
+  margin-left: 0px;
+}
+
+main {
+  margin-bottom: 45px;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+}
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 15px 6% 15px 0;
+  background-color: var(--primary);
+  box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
+}
+
 .outer-box {
   border: 2px solid black;
   padding: 5px;
   display: flex;
   justify-content: space-between;
+  
 }
 
 .inner-box-1 {
@@ -140,6 +167,20 @@ nav a:last-child {
   background-color: white;
   border: 5px solid var(--secondary);
 }
+
+.box ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  
+.box li{
+margin-left: 40px;
+text-align: start;
+padding: 5px;
+width: auto;
+}
+
 .carousel-item img {
   width: 100%;
   height: 200px; /* Adjust height as needed */
