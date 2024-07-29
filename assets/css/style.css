@@ -67,21 +67,17 @@ nav a {
   padding: 5px 10px;
   color: var(--secondary);
   margin-right: 10px;
-  background-image: linear-gradient(
-    270deg,
-    var(--secondary) 0%,
-    var(--secondary) 100%
-  );
   background-repeat: no-repeat;
-  background-size: 100% 0.2em;
+  background-size: 0% 0.2em;
   background-position: top;
-  transition: all 0.25s ease-in;
+  border-radius: 10px;
   font-size: 1.4rem;
 }
 
 nav a:hover {
   background-size: 100% 100%;
   color: var(--primary);
+  background-color: var(--secondary);
 }
 
 nav a:last-child {
@@ -138,14 +134,25 @@ footer {
   display: inline;
 }
 
+.hero-banner p {
+  text-align: center;
+}
+
 .blogger-section {
   display: flex;
   flex-direction: row;
   justify-content: space-between; /* Center vertically */
-  align-items: center; /* Center horizontally */
+  align-items: flex-start; /* Center horizontally */
   padding: 2% 6%;
   line-height: 1.5;
   flex-wrap: wrap;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .list-group-item:hover {

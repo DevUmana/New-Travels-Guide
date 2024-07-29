@@ -65,33 +65,30 @@ header h2 {
 
 nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
 }
 
 nav a {
   text-decoration: none;
-  padding: 1px 1px;
+  padding: 5px 10px;
   color: var(--secondary);
-  margin-right: 3px;
-
+  margin-right: 10px;
   background-repeat: no-repeat;
-  background-size: 100% 0.2em;
-  transition: all 0.25s ease-in;
-  font-size: 0.8rem;
+  background-size: 0% 0.2em;
+  background-position: top;
+  border-radius: 10px;
+  font-size: 1.4rem;
 }
 
-.static {
-  background-color: var(--secondary);
+nav a:hover {
+  background-size: 100% 100%;
   color: var(--primary);
+  background-color: var(--secondary);
 }
 
 nav a:last-child {
   margin-right: 0;
-}
-
-nav a:first-child {
-  margin-left: 0px;
 }
 
 .outer-box {
