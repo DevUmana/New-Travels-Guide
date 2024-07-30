@@ -34,62 +34,7 @@ p {
   margin: 0;
 }
 
-header {
-  padding: 15px 6% 15px 5;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  height: 100px;
-  align-items: center;
-  background-color: var(--primary);
-  box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
-}
 
-header h1 {
-  color: var(--primary);
-  background-color: var(--secondary);
-  padding: 5px 5% 10px 5%;
-  margin: 0;
-  font-size: 3vw;
-  line-height: 1;
-  border-radius: 10px;
-  color: var(--light);
-}
-
-header h2 {
-  color: var(--light);
-  justify-content: center;
-  padding: 5px 5% 10px 5%;
-}
-
-nav {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-nav a {
-  text-decoration: none;
-  padding: 5px 10px;
-  color: var(--secondary);
-  margin-right: 10px;
-  background-repeat: no-repeat;
-  background-size: 0% 0.2em;
-  background-position: top;
-  border-radius: 10px;
-  font-size: 1.4rem;
-}
-
-nav a:hover {
-  background-size: 100% 100%;
-  color: var(--primary);
-  background-color: var(--secondary);
-}
-
-nav a:last-child {
-  margin-right: 0;
-}
 
 .outer-box {
   padding: 5px;
@@ -113,6 +58,10 @@ nav a:last-child {
   border: 5px solid var(--light);
   margin: 5px;
   border-radius: 10px;
+}
+
+.inner-box-2 p {
+  padding: 10px;
 }
 
 .container {
