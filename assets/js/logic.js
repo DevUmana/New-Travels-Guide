@@ -68,7 +68,7 @@ landingMain.addEventListener("click", function (event) {
         JSON.stringify(bloggerThreeList)
       );
       // clear ul element
-      let ul = bloggerTwoDiv.querySelector("ul");
+      let ul = bloggerThreeDiv.querySelector("ul");
       ul.remove();
       renderBloggerThree();
     } else if (divId === "blogger-four") {
@@ -82,7 +82,7 @@ landingMain.addEventListener("click", function (event) {
       }
       localStorage.setItem("bloggerFourList", JSON.stringify(bloggerFourList));
       // clear ul element
-      let ul = bloggerTwoDiv.querySelector("ul");
+      let ul = bloggerFourDiv.querySelector("ul");
       ul.remove();
       renderBloggerFour();
     }
@@ -111,7 +111,7 @@ function readBloggerTwo() {
 
 // Read Blogger Three List
 function readBloggerThree() {
-  const readBloggerThree = JSON.parse(localStorage.getItem("readBloggerThree"));
+  const readBloggerThree = JSON.parse(localStorage.getItem("bloggerThreeList"));
   if (!readBloggerThree) {
     return [];
   } else {
@@ -121,7 +121,7 @@ function readBloggerThree() {
 
 // Read Blogger Four List
 function readBloggerFour() {
-  const readBloggerFour = JSON.parse(localStorage.getItem("readBloggerFour"));
+  const readBloggerFour = JSON.parse(localStorage.getItem("bloggerFourList"));
   if (!readBloggerFour) {
     return [];
   } else {

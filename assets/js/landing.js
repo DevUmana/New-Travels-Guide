@@ -2,6 +2,12 @@ const bloggerOneUlEL = document.querySelector("#blogger-one");
 const bloggerTwoUlEL = document.querySelector("#blogger-two");
 const bloggerThreeUlEL = document.querySelector("#blogger-three");
 const bloggerFourUlEL = document.querySelector("#blogger-four");
+const myModal = document.getElementById('staticBackdrop')
+const myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', () => {
+  myInput.focus()
+})
 
 // TODO: Create a function that builds an element and appends it to the DOM
 function appendElementToDOM(list) {
