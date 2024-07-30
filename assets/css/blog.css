@@ -106,6 +106,14 @@ nav a:last-child {
   margin: 5px;
 }
 
+.inner-box-1 img {
+
+  display: flex;
+  height: 200px;
+  width:  200px;
+  object-fit: contain;
+}
+
 .inner-box-2 {
   width: 2000px;
   height: 175px;
