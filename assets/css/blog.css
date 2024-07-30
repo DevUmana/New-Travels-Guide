@@ -30,6 +30,10 @@ main {
   border: 5px solid var(--light);
   margin: 5px;
   border-radius: 10px;
+  color: var(--secondary);
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
 }
 
 .inner-box-2 p {
@@ -39,6 +43,10 @@ main {
 .container {
   display: flex;
   user-select: none;
+}
+
+.container h2 {
+  text-decoration: underline ;
 }
 
 /* Highlights list item element */
@@ -51,9 +59,11 @@ main {
 .container li {
   text-decoration: none;
   color: var(--primary);
-  list-style-type: none;
+  list-style-type: none ;
   padding: 10px;
   text-align: left;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .box {
@@ -98,8 +108,21 @@ main {
   height: auto;
 }
 
+.carousel-inner {
+  position: relative; 
+}
+
+.carousel-item {
+  text-align: center; 
+}
+
+.carousel-item img {
+  max-width: 100%; 
+  height: auto; 
+}
+
 #carouselExampleSlidesOnly {
-  width: 50%; /* Set the width of the carousel */
-  margin: 0 auto !important; /* Center the carousel horizontally */
-  padding: 20px; /* Add more padding to the top */
+  width: 50%;
+  margin: 0 auto !important; 
+  padding: 100px 20px 20px 20px; 
 }
