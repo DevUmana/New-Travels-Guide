@@ -148,7 +148,25 @@ nav a:last-child {
   color: var(--secondary)
 }
 
-#carousel {
+.success {
+  display: none;
+}
+
+.show {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(45, 156, 51);
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+}
+
+#carouselExampleSlidesOnly {
     width: 80%; /* Set the width of the carousel */
     margin: 0 auto !important; /* Center the carousel horizontally */
     justify-content: left;
