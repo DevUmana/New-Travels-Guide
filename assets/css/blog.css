@@ -92,7 +92,6 @@ nav a:last-child {
 }
 
 .outer-box {
-  border: 2px solid black;
   padding: 5px;
   display: flex;
   justify-content: space-between;
@@ -104,6 +103,7 @@ nav a:last-child {
   background-color: white;
   border: 5px solid var(--dark);
   margin: 5px;
+  border-radius: 10px;
 }
 
 .inner-box-2 {
@@ -112,11 +112,13 @@ nav a:last-child {
   background-color: white;
   border: 5px solid var(--light);
   margin: 5px;
+  border-radius: 10px;
 }
 
 .container {
   display: flex;
   user-select: none;
+  
 }
 
 /* Highlights list item element */
@@ -129,6 +131,9 @@ nav a:last-child {
 .container li {
   text-decoration: none;
   color: var(--primary);
+  list-style-type: none ;
+    padding: 10px;
+    text-align: left;
 }
 
 .box {
@@ -139,6 +144,8 @@ nav a:last-child {
   text-align: center;
   background-color: white;
   border: 5px solid var(--secondary);
+  border-radius: 10px;
+  color: var(--secondary)
 }
 
 .success {
@@ -159,23 +166,40 @@ nav a:last-child {
   height: 200px; /* Adjust height as needed */
 }
 
-/* Styling Carousel Captions */
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  color: white;
-  text-align: center;
-  padding: 1px;
-}
+#carouselExampleSlidesOnly {
+    width: 80%; /* Set the width of the carousel */
+    margin: 0 auto !important; /* Center the carousel horizontally */
+    justify-content: left;
+    padding: 20px;
+    
+  }
+  
+  .carousel-inner {
+    position: relative; 
+  }
+  
+  .carousel-item {
+    text-align: center; 
+  }
+  
+  .carousel-item img {
+    max-width: 100%; 
+    height: auto; 
+  }
 
-/* Carousel Controls */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  color: #fff; /* Control button color */
-}
 
-/* Indicator Dots */
-.carousel-indicators button {
-  background-color: #888; /* Indicator dot color */
-  width: 10px; /* Adjust size */
-  height: 10px; /* Adjust size */
-}
+footer {
+    position: auto;
+    left: 0px;
+    bottom: 0px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px 6% 15px 0;
+    background-color: var(--primary);
+    box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
+  }
