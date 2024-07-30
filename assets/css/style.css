@@ -159,7 +159,6 @@ footer {
 .blogger-section {
   display: flex;
   flex-direction: row;
-  
   justify-content: space-between; /* Center vertically */
   align-items: flex-start; /* Center horizontally */
   padding: 2% 6%;
