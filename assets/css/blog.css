@@ -43,12 +43,15 @@ p {
 }
 
 .inner-box-1 {
-  width: 400px;
-  height: 175px;
   background-color: white;
   border: 5px solid var(--dark);
   margin: 5px;
   border-radius: 10px;
+}
+
+.inner-box-1 img {
+  height: 100%;
+  max-width:  200px; 
 }
 
 .inner-box-2 {
