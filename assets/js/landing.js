@@ -1,7 +1,11 @@
+const body = document.body;
 const bloggerOneUlEL = document.querySelector("#blogger-one");
 const bloggerTwoUlEL = document.querySelector("#blogger-two");
 const bloggerThreeUlEL = document.querySelector("#blogger-three");
 const bloggerFourUlEL = document.querySelector("#blogger-four");
+const emailInputEL = document.querySelector("#email");
+const commentInputEL = document.querySelector("#msg");
+const errorFormEL = document.querySelector("#error-message");
 
 // TODO: Create a function that builds an element and appends it to the DOM
 function appendElementToDOM(list) {
@@ -83,7 +87,6 @@ function renderBloggerTwo() {
   if (readBloggerTwoList.length === 0) {
     return;
   } else {
-    console.log("here 1");
     appendElementToDOM(readBloggerTwoList);
   }
 }
@@ -109,5 +112,56 @@ function renderBloggerFour() {
     appendElementToDOM(readBloggerFourList);
   }
 }
+
+// add event listener when submit button is clicked
+document.querySelector("#submit").addEventListener("click", (event) => {
+  event.preventDefault();
+  const email = emailInputEL.value.trim();
+  const comment = commentInputEL.value.trim();
+
+  if (email === "" || comment === "") {
+    errorFormEL.textContent = "Please fill out all fields";
+    return;
+  }
+
+  let data = {
+    email: email,
+    comment: comment,
+  };
+
+  // Add data to local storage
+  addComment(data);
+
+  // Clear input fields
+  emailInputEL.value = "";
+  commentInputEL.value = "";
+  errorFormEL.textContent = "";
+
+  // dismiss modal
+  let modal = document.querySelector(".modal");
+  let modalBackdrop = document.querySelector(".modal-backdrop");
+  modal.classList.remove("show");
+  modalBackdrop.classList.remove("show");
+  modal.setAttribute("aria-hidden", "true");
+  modal.setAttribute("aria-modal", "false");
+  modal.setAttribute("role", "dialog");
+  body.style.paddingRight = "";
+  body.style.overflow = "";
+});
+
+// add event listener when close button is clicked
+document.addEventListener("click", (event) => {
+  if (event.target.id === "close") {
+    emailInputEL.value = "";
+    commentInputEL.value = "";
+    errorFormEL.textContent = "";
+  }
+});
+
+addComment = (data) => {
+  let comments = JSON.parse(localStorage.getItem("comments")) || [];
+  comments.push(data);
+  localStorage.setItem("comments", JSON.stringify(comments));
+};
 
 readAllBlogger();

@@ -1,40 +1,9 @@
-* {
-  box-sizing: border-box;
+main {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
 }
-
-/* brand color palette */
-:root {
-  --primary: rgb(8, 53, 121);
-  --secondary: rgb(196, 11, 11);
-  --tertiary: rgb(76, 59, 91);
-  --dark: rgb(11, 18, 43);
-  --light: rgb(250, 250, 0);
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans";
-  color: var(--primary);
-  background-color: var(--light);
-  line-height: 1.5;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-
 
 .outer-box {
   padding: 5px;
@@ -51,7 +20,7 @@ p {
 
 .inner-box-1 img {
   height: 100%;
-  max-width:  200px; 
+  max-width: 200px;
 }
 
 .inner-box-2 {
@@ -70,7 +39,6 @@ p {
 .container {
   display: flex;
   user-select: none;
-  
 }
 
 /* Highlights list item element */
@@ -83,9 +51,9 @@ p {
 .container li {
   text-decoration: none;
   color: var(--primary);
-  list-style-type: none ;
-    padding: 10px;
-    text-align: left;
+  list-style-type: none;
+  padding: 10px;
+  text-align: left;
 }
 
 .box {
@@ -97,7 +65,11 @@ p {
   background-color: white;
   border: 5px solid var(--secondary);
   border-radius: 10px;
-  color: var(--secondary)
+  color: var(--secondary);
+}
+
+.message-block {
+  height: 40px;
 }
 
 .success {
@@ -113,39 +85,21 @@ p {
   color: rgb(45, 156, 51);
 }
 
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+}
 
 #carouselExampleSlidesOnly {
   width: 50%; /* Set the width of the carousel */
   margin: 0 auto !important; /* Center the carousel horizontally */
-  padding: 100px 20px 20px 20px; /* Add more padding to the top */
+  padding: 20px; /* Add more padding to the top */
 }
-
-.carousel-inner {
-  position: relative; 
-}
-
-.carousel-item {
-  text-align: center; 
-}
-
-.carousel-item img {
-  max-width: 100%; 
-  height: auto; 
-}
-
-
-footer {
-    position: auto;
-    left: 0px;
-    bottom: 0px;
-    height: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 15px 6% 15px 0;
-    background-color: var(--primary);
-    box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
-  }
