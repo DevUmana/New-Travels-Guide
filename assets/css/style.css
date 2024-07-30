@@ -35,7 +35,7 @@ p {
 }
 
 header {
-  padding: 15px 6% 15px 0;
+  padding: 15px 6% 15px 5;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -49,11 +49,18 @@ header {
 header h1 {
   color: var(--primary);
   background-color: var(--secondary);
-  padding: 5px 10% 10px 10%;
+  padding: 5px 5% 10px 5%;
   margin: 0;
-  font-size: 3vw;
+  font-size: 2vw;
   line-height: 1;
   border-radius: 10px;
+  color: var(--light);
+}
+
+header h2 {
+  color: var(--light);
+  justify-content: center;
+  padding: 5px 5% 10px 5%;
 }
 
 nav {
