@@ -98,8 +98,6 @@ nav a:last-child {
 }
 
 .inner-box-1 {
-  width: 400px;
-  height: 175px;
   background-color: white;
   border: 5px solid var(--dark);
   margin: 5px;
@@ -107,11 +105,8 @@ nav a:last-child {
 }
 
 .inner-box-1 img {
-
-  display: flex;
-  height: 200px;
-  width:  200px;
-  object-fit: contain;
+  height: 100%;
+  max-width:  200px; 
 }
 
 .inner-box-2 {
