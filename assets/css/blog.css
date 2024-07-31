@@ -16,11 +16,14 @@ main {
   border: 5px solid var(--dark);
   margin: 5px;
   border-radius: 10px;
+  height: 175px;
+  width: 175px;
 }
 
 .inner-box-1 img {
+  width: 100%;
   height: 100%;
-  max-width: 200px;
+  object-fit: cover;
 }
 
 .inner-box-2 {
