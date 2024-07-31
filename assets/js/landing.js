@@ -6,6 +6,7 @@ const bloggerFourUlEL = document.querySelector("#blogger-four");
 const emailInputEL = document.querySelector("#email");
 const commentInputEL = document.querySelector("#msg");
 const errorFormEL = document.querySelector("#error-message");
+const successReviewEL = document.querySelector(".alert-success");
 
 // TODO: Create a function that builds an element and appends it to the DOM
 function appendElementToDOM(list) {
@@ -147,6 +148,7 @@ document.querySelector("#submit").addEventListener("click", (event) => {
   modal.setAttribute("role", "dialog");
   body.style.paddingRight = "";
   body.style.overflow = "";
+  displaySuccessReview();
 });
 
 // add event listener when close button is clicked
@@ -163,5 +165,19 @@ addComment = (data) => {
   comments.push(data);
   localStorage.setItem("comments", JSON.stringify(comments));
 };
+
+// display success review message
+function displaySuccessReview() {
+  successReviewEL.classList.add("display");
+  setTimeout(function () {
+    successReviewEL.classList.remove("display");
+  }, 3000);
+}
+
+function hideSuccessReview() {
+  successReviewEL.classList.remove("display");
+}
+
+hideSuccessReview();
 
 readAllBlogger();
