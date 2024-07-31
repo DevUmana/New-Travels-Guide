@@ -32,6 +32,7 @@ blogMain.addEventListener("click", function (event) {
 });
 
 function displaySuccessMessage() {
+  hideSuccessMessage();
   alert.classList.add("show");
   setTimeout(function () {
     alert.classList.remove("show");

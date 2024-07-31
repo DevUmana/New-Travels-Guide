@@ -24,14 +24,15 @@ main {
 }
 
 .inner-box-2 {
-  width: 2000px;
+  width: 100%;
   height: 175px;
   background-color: white;
   border: 5px solid var(--light);
+  padding: 5px;
   margin: 5px;
   border-radius: 10px;
   color: var(--secondary);
-  font-size: 18px;
+  font-size: 0.9rem;
   font-style: italic;
   text-align: center;
 }
@@ -46,7 +47,7 @@ main {
 }
 
 .container h2 {
-  text-decoration: underline ;
+  text-decoration: underline;
 }
 
 /* Highlights list item element */
@@ -59,10 +60,10 @@ main {
 .container li {
   text-decoration: none;
   color: var(--primary);
-  list-style-type: none ;
+  list-style-type: none;
   padding: 10px;
   text-align: left;
-  font-size: 20px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -109,20 +110,70 @@ main {
 }
 
 .carousel-inner {
-  position: relative; 
+  position: relative;
 }
 
 .carousel-item {
-  text-align: center; 
+  text-align: center;
 }
 
 .carousel-item img {
-  max-width: 100%; 
-  height: auto; 
+  max-width: 100%;
+  height: auto;
 }
 
 #carouselExampleSlidesOnly {
-  width: 50%;
-  margin: 0 auto !important; 
-  padding: 100px 20px 20px 20px; 
+  width: 70%;
+  margin: 0 auto !important;
+  padding: 20px;
+}
+
+/* Tablets - header changes color */
+@media screen and (max-width: 992px) {
+  .inner-box-2 p {
+    font-size: 0.8rem;
+  }
+
+  .container li {
+    font-size: 0.8rem;
+  }
+}
+
+/* Large smartphones - navbar changes color */
+@media screen and (max-width: 768px) {
+  .outer-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .show {
+    font-size: 10px;
+    display: flex;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 40px;
+    padding: 3px;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+}
+
+/* Small smartphones - image placeholders change color */
+@media screen and (max-width: 576px) {
+  .inner-box-2 p {
+    font-size: 0.6rem;
+
+  }
 }
