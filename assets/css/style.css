@@ -93,7 +93,7 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-bottom: 100px;
+  margin-bottom: auto;
 }
 
 footer {
@@ -285,6 +285,10 @@ footer {
     padding: 5px 5px;
     margin-right: 0;
     font-size: 1rem;
+  }
+
+  main {
+    height: fit-content;
   }
 
   .hero-banner h2 {
