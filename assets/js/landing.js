@@ -126,7 +126,7 @@ document.querySelector("#submit").addEventListener("click", (event) => {
   } else if (!email.includes("@")) {
     errorFormEL.textContent = "Please enter a valid email";
     return;
-  } 
+  }
 
   let data = {
     email: email,
