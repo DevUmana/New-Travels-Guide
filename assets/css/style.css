@@ -253,3 +253,25 @@ footer {
 #error-message {
   color: red;
 }
+
+.alert-success {
+font-size: 10px;
+display: none;
+background-color: green;
+border-radius: 10px;
+font-weight: bold;
+position: fixed;
+top: 50%;
+left: 50%;
+width: 150px;
+height: 40px;
+padding: 3px; 
+justify-content: center;
+align-items: center;
+margin-top: -50px;
+margin-left: -50px;
+}
+
+.display {
+  display: flex;
+}
