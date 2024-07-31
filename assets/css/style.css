@@ -90,6 +90,7 @@ nav a:last-child {
 }
 
 main {
+  height: fit-content;
   display: flex;
   flex-direction: column;
   margin-bottom: 100px;
@@ -103,23 +104,6 @@ footer {
   align-items: center;
   background-color: var(--primary);
   box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
-}
-
-.reviewForm ul {
-  padding: 0;
-}
-
-.reviewForm li {
-  list-style: none;
-}
-
-.reviewForm input[type="email"],
-.reviewForm textarea {
-  width: 100%;
-  margin-top: 5px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
 }
 
 .hero-banner {
@@ -166,22 +150,10 @@ footer {
 .blogger-section div {
   margin-left: 10px;
 }
+
 .blogger-section h5,
 .blogger-section p {
   color: var(--primary);
-}
-
-.list-group-item:hover {
-  background-color: var(--secondary);
-  color: var(--light);
-}
-
-.list-group-item:hover #btn-close {
-  display: block;
-}
-
-.list-group-item p {
-  margin: 0;
 }
 
 .blogger-card {
@@ -215,6 +187,23 @@ footer {
   margin: 10px 0; /* Add margin around paragraphs */
 }
 
+.reviewForm ul {
+  padding: 0;
+}
+
+.reviewForm li {
+  list-style: none;
+}
+
+.reviewForm input[type="email"],
+.reviewForm textarea {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
 .alert-success {
   font-size: 10px;
   display: none;
@@ -236,6 +225,31 @@ footer {
 
 .display {
   display: flex;
+}
+
+#list-group-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+#list-group-item p {
+  margin: 0;
+}
+
+#list-group-item:hover #btn-close {
+  display: flex;
+}
+
+#list-group-item:hover {
+  background-color: var(--secondary);
+}
+
+#list-group-item:hover p {
+  color: var(--light);
+}
+
+#btn-close {
+  display: none;
 }
 
 #reviewButton,
