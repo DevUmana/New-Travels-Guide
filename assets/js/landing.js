@@ -123,7 +123,10 @@ document.querySelector("#submit").addEventListener("click", (event) => {
   if (email === "" || comment === "") {
     errorFormEL.textContent = "Please fill out all fields";
     return;
-  }
+  } else if (!email.includes("@")) {
+    errorFormEL.textContent = "Please enter a valid email";
+    return;
+  } 
 
   let data = {
     email: email,
@@ -141,11 +144,14 @@ document.querySelector("#submit").addEventListener("click", (event) => {
   // dismiss modal
   let modal = document.querySelector(".modal");
   let modalBackdrop = document.querySelector(".modal-backdrop");
+
+  body.classList.remove("modal-open");
   modal.classList.remove("show");
-  modalBackdrop.classList.remove("show");
+  modalBackdrop.remove();
   modal.setAttribute("aria-hidden", "true");
   modal.setAttribute("aria-modal", "false");
   modal.setAttribute("role", "dialog");
+  modal.setAttribute("style", "display: none");
   body.style.paddingRight = "";
   body.style.overflow = "";
   displaySuccessReview();
