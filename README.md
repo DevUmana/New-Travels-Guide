@@ -1,5 +1,3 @@
-# project-01
-
 # Name
 
 New Travels Guide
@@ -8,17 +6,15 @@ New Travels Guide
 
 Our travel guide has been created in hopes that potential tourists/visitors are able to seamlessely navigate between given cities within a Tri-State region. When potential tourists/visitors navigate to a selected city, they are able to learn about the given city and select items of interest that will then be rendered to the landing page to create a list of points of interest for a variety of cities.
 
-# Badges
-
-_On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge._
-
 # Visuals
 
-_Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but chck out Asciinema for a more sophisticated method._
+## Landing Page
 
-# Installation
+![til](./assets/gif/NewTravelsGuideLanding.gif)
 
-_Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection._
+## Blog Page
+
+![til](./assets/gif/NewTravelsGuideBlog.gif)
 
 # Usage
 
@@ -56,20 +52,35 @@ It is our vision that this blog will become grow so that local residents within 
 
 As a team, we welcome suggestions, contributions, and constructive feedback to all who are willing to provide.
 
-_For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self._
-
-_You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser._
-
 # Authors and acknowledgment
 
 This travel guide was achieved through the use of a collaborative approach by David, Alex, Kevin, and Mathew.
 
-_Credit pictures?_
-
 # License
 
-For open source projects, say how it is licensed.
+MIT License
+
+Copyright (c) 2024 David Umana
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 # Project status
 
-_If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers._
+Deployed  
+[Link to Website](https://devumana.github.io/New-Travels-Guide/)
